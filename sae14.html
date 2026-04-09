@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ 14 – Portfolio web | Portfolio Lucas Martin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="nav-name">Lucas Martin</a>
+        <div class="nav-links">
+            <a href="index.html">← Retour</a>
+        </div>
+    </nav>
+</header>
+
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <span class="num">SAÉ 14 — Semestre 1</span>
+        <h1>Se présenter sur Internet</h1>
+        <p class="tagline">Concevoir, développer et héberger ce portfolio en HTML/CSS — du code source à la mise en ligne.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="detail-grid">
+
+        <div>
+            <div class="content-block">
+                <h2>Contexte et objectifs</h2>
+                <p>L'objectif de cette SAÉ était double : apprendre les bases du développement web (HTML5, CSS3) et comprendre la chaîne complète de publication d'un site internet (hébergement, DNS, FTP). Le livrable est ce portfolio lui-même, que vous consultez en ce moment. C'est une SAÉ individuelle, ce qui m'a obligé à prendre en charge chaque décision de bout en bout.</p>
+                <p>La compétence visée était RT3 (Créer des outils et applications informatiques), niveau 1 : s'intégrer dans un service informatique.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Apprentissages Critiques mobilisés</h2>
+                <div class="ac-list">
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.01 — RT3</div>
+                        <div class="ac-label">Utiliser un système informatique et ses outils</div>
+                        <div class="ac-desc">Utilisation de VS Code comme éditeur, du terminal pour le déploiement FTP (FileZilla), des outils de développement du navigateur (inspecteur, console) pour déboguer le CSS.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.04 — RT3</div>
+                        <div class="ac-label">Connaître l'architecture et les technologies d'un site Web</div>
+                        <div class="ac-desc">Compréhension du rôle du serveur HTTP, du DNS (résolution d'un nom de domaine vers une IP), de l'hébergement mutualisé, et de la structure HTML/CSS d'un site multi-pages avec feuille de style partagée.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Tâches réalisées</h2>
+                <ul>
+                    <li>Conception de l'arborescence du site (index.html + une page par SAÉ + pages présentation et bilan)</li>
+                    <li>Développement de la feuille de style CSS commune (variables, header, hero, cards, pages de détail)</li>
+                    <li>Développement de chaque page HTML en respectant la sémantique HTML5</li>
+                    <li>Tests de compatibilité sur Chrome et Firefox</li>
+                    <li>Déploiement sur le serveur de l'IUT via FTP et vérification de la mise en ligne</li>
+                    <li>Configuration de la résolution DNS et vérification avec nslookup</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2>Traces et preuves</h2>
+                <div class="trace-block">
+                    <div class="trace-label">Trace 1 — Ce site lui-même</div>
+                    <p>Le portfolio que vous consultez est le livrable direct de cette SAÉ. Il comporte 7 pages HTML liées par une feuille CSS commune, hébergé sur le serveur de l'IUT. L'ensemble du code source est disponible sur mon GitHub. C'est la trace la plus concrète possible pour AC13.04 : la preuve que je maîtrise l'architecture d'un site web fonctionnel.</p>
+                </div>
+                <div class="trace-block">
+                    <div class="trace-label">Trace 2 — Capture de la résolution DNS</div>
+                    <p>Capture d'écran de la commande <code>nslookup mon-portfolio.iut-ville.fr</code> renvoyant l'IP du serveur, réalisée après la mise en ligne. Montre la compréhension concrète du mécanisme DNS (AC13.04) et l'utilisation des outils système (AC13.01).</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Autoévaluation</h2>
+                <div class="autoeval-grid">
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Ce que j'ai réussi</div>
+                        <p>Le site est en ligne, navigation fonctionnelle, design cohérent sur toutes les pages. La feuille CSS partagée m'a évité de répéter le même code.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Difficultés rencontrées</div>
+                        <p>Le positionnement CSS (flexbox, grid) m'a demandé beaucoup d'essais-erreurs. J'ai aussi mis du temps à comprendre que les chemins relatifs des fichiers CSS changent selon l'emplacement des pages.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Ce que j'aurais fait autrement</div>
+                        <p>J'aurais utilisé Git dès le début pour versionner mon code plutôt que de tout uploader à la fin. J'aurais évité de perdre une version intermédiaire.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Adaptation possible</div>
+                        <p>Ces compétences sont transférables à la création de tout site statique, mais aussi à la compréhension des interfaces web dans les outils d'administration réseau (Grafana, pfSense, etc.).</p>
+                    </div>
+                </div>
+                <div class="note-perso">
+                    ✏️ Ce que cette SAÉ m'a appris au-delà du HTML/CSS : publier quelque chose sur internet oblige à tout assumer. Il n'y a plus d'enseignant qui corrige en privé — le résultat est visible par tout le monde. Ça m'a rendu plus rigoureux et plus attentif aux détails.
+                </div>
+                <div class="niveau-bar">
+                    <div class="niveau-label">Niveau de maîtrise estimé — AC visés de la SAÉ 14</div>
+                    <div class="niveau-track"><div class="niveau-fill" style="width:55%"></div></div>
+                    <div class="niveau-ticks"><span>Débutant</span><span>En cours d'acquisition</span><span>Maîtrisé</span></div>
+                </div>
+                <a href="index.html" class="back">← Retour aux projets</a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h3>Infos projet</h3>
+                <div class="info-row"><span>Durée</span><span>3 semaines</span></div>
+                <div class="info-row"><span>Format</span><span>Individuel</span></div>
+                <div class="info-row"><span>Rendu</span><span>Site en ligne</span></div>
+                <div class="info-row"><span>Statut</span><span><span class="badge-ok">En ligne</span></span></div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Compétences visées</h3>
+                <div class="info-row"><span>RT3 Niveau 1</span><span>✓</span></div>
+            </div>
+            <div class="sidebar-card">
+                <h3>AC mobilisés</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">AC13.01</span>
+                    <span class="tech-tag">AC13.04</span>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Outils utilisés</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">VS Code</span>
+                    <span class="tech-tag">FileZilla</span>
+                    <span class="tech-tag">DNS</span>
+                    <span class="tech-tag">Git</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Lucas Martin — BUT R&T, IUT de [Ville]</p>
+</footer>
+</body>
+</html>

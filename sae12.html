@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ 12 – Réseaux | Portfolio Lucas Martin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="nav-name">Lucas Martin</a>
+        <div class="nav-links">
+            <a href="index.html">← Retour</a>
+        </div>
+    </nav>
+</header>
+
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <span class="num">SAÉ 12 — Semestre 1</span>
+        <h1>S'initier aux réseaux informatiques</h1>
+        <p class="tagline">Concevoir et configurer un réseau local sur simulateur, analyser des trames réseau.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="detail-grid">
+
+        <div>
+            <div class="content-block">
+                <h2>Contexte et objectifs</h2>
+                <p>Cette SAÉ nous a placés dans la peau de techniciens réseau junior chargés de concevoir et configurer le réseau informatique d'une petite entreprise fictive (3 services, 15 postes). Le travail s'est effectué sur Cisco Packet Tracer, un simulateur réseau, et complété par des TP d'analyse de trames avec Wireshark.</p>
+                <p>La compétence visée était principalement RT1 (Administrer les réseaux), niveau 1 : assister l'administrateur du réseau.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Apprentissages Critiques mobilisés</h2>
+                <div class="ac-list">
+                    <div class="ac-item">
+                        <div class="ac-code">AC11.02 — RT1</div>
+                        <div class="ac-label">Comprendre l'architecture et les fondements des systèmes numériques</div>
+                        <div class="ac-desc">Étude approfondie du modèle OSI (7 couches) et de la pile TCP/IP : comment les données sont encapsulées à chaque couche, ce que ça implique concrètement lors de la configuration d'un équipement.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC11.03 — RT1</div>
+                        <div class="ac-label">Configurer les fonctions de base du réseau local</div>
+                        <div class="ac-desc">Configuration d'adresses IP statiques, création de VLANs sur un switch Cisco, configuration d'une interface de routage inter-VLAN (router-on-a-stick) sur Packet Tracer.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC11.04 — RT1</div>
+                        <div class="ac-label">Maîtriser les rôles des systèmes d'exploitation</div>
+                        <div class="ac-desc">Utilisation de commandes réseau sous Windows (ipconfig, netstat) et Linux (ifconfig, ip route) pour configurer et vérifier les interfaces.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC11.05 — RT1</div>
+                        <div class="ac-label">Identifier les dysfonctionnements du réseau local</div>
+                        <div class="ac-desc">Diagnostic de pannes simulées sur Packet Tracer (câble croisé, mauvais masque de sous-réseau, VLAN mal attribué) à l'aide de ping, traceroute et de l'analyse Wireshark.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC11.06 — RT1</div>
+                        <div class="ac-label">Installer un poste client, expliquer la procédure</div>
+                        <div class="ac-desc">Procédure d'ajout d'un nouveau poste au réseau : attribution d'IP, intégration au bon VLAN, vérification de la connectivité — documentée dans le compte-rendu.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Tâches réalisées</h2>
+                <p>Travail en binôme pour la partie Packet Tracer, compte-rendu individuel. Ma contribution :</p>
+                <ul>
+                    <li>Conception du plan d'adressage IP (segmentation en 3 sous-réseaux /26, calcul des plages)</li>
+                    <li>Configuration des VLANs sur le switch et des interfaces sur le routeur</li>
+                    <li>Simulation et résolution de 3 pannes réseau proposées par l'enseignant</li>
+                    <li>Capture et annotation de trames Wireshark (ARP, ICMP, TCP three-way handshake)</li>
+                    <li>Rédaction du compte-rendu de TP individuel</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2>Traces et preuves</h2>
+                <div class="trace-block">
+                    <div class="trace-label">Trace 1 — Plan d'adressage IP</div>
+                    <p>Tableau Excel documentant le découpage en sous-réseaux : réseau de base 192.168.10.0/24 divisé en 3 sous-réseaux /26 pour les 3 services. Chaque ligne précise l'adresse réseau, le masque, la plage d'hôtes, l'adresse de broadcast et la passerelle. Illustre AC11.03 et la maîtrise du subnetting.</p>
+                </div>
+                <div class="trace-block">
+                    <div class="trace-label">Trace 2 — Capture Wireshark annotée</div>
+                    <p>Capture d'une séquence ARP + ICMP entre deux machines du réseau simulé, annotée avec des flèches et des commentaires expliquant chaque échange. Montre concrètement comment les paquets circulent, illustrant AC11.02 (architecture des communications) et AC11.05 (analyse de dysfonctionnements).</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Autoévaluation</h2>
+                <div class="autoeval-grid">
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Ce que j'ai réussi</div>
+                        <p>Le plan d'adressage est correct et le réseau fonctionne sur Packet Tracer. J'ai réussi à diagnostiquer les 3 pannes de façon autonome.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Difficultés rencontrées</div>
+                        <p>Le subnetting m'a demandé beaucoup d'entraînement. Au début, je confondais l'adresse réseau et la première adresse d'hôte. J'ai dû refaire les calculs plusieurs fois.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Ce que j'aurais fait autrement</div>
+                        <p>J'aurais documenté chaque étape de configuration au fur et à mesure, plutôt que de reconstituer le compte-rendu à la fin de la séance.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Adaptation possible</div>
+                        <p>Ces compétences sont directement réutilisables dans tout environnement professionnel : un technicien réseau fait exactement ces opérations au quotidien, sur du matériel réel.</p>
+                    </div>
+                </div>
+                <div class="note-perso">
+                    ✏️ Le TP Wireshark a été un déclic. Voir les paquets ARP et TCP s'afficher en temps réel m'a permis de comprendre que les protocoles ne sont pas des abstractions — ce sont des échanges très concrets, observables. Depuis, j'ai l'habitude d'ouvrir Wireshark chaque fois que quelque chose ne marche pas comme prévu.
+                </div>
+                <div class="niveau-bar">
+                    <div class="niveau-label">Niveau de maîtrise estimé — AC visés de la SAÉ 12</div>
+                    <div class="niveau-track"><div class="niveau-fill" style="width:65%"></div></div>
+                    <div class="niveau-ticks"><span>Débutant</span><span>En cours d'acquisition</span><span>Maîtrisé</span></div>
+                </div>
+                <a href="index.html" class="back">← Retour aux projets</a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h3>Infos projet</h3>
+                <div class="info-row"><span>Durée</span><span>5 semaines</span></div>
+                <div class="info-row"><span>Format</span><span>Binôme + CR individuel</span></div>
+                <div class="info-row"><span>Rendu</span><span>CR de TP + oral</span></div>
+                <div class="info-row"><span>Statut</span><span><span class="badge-ok">Terminé</span></span></div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Compétences visées</h3>
+                <div class="info-row"><span>RT1 Niveau 1</span><span>✓</span></div>
+            </div>
+            <div class="sidebar-card">
+                <h3>AC mobilisés</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">AC11.02</span>
+                    <span class="tech-tag">AC11.03</span>
+                    <span class="tech-tag">AC11.04</span>
+                    <span class="tech-tag">AC11.05</span>
+                    <span class="tech-tag">AC11.06</span>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Outils utilisés</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Packet Tracer</span>
+                    <span class="tech-tag">Wireshark</span>
+                    <span class="tech-tag">IPv4</span>
+                    <span class="tech-tag">VLAN</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Lucas Martin — BUT R&T, IUT de [Ville]</p>
+</footer>
+</body>
+</html>

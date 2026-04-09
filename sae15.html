@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ 15 – Python | Portfolio Lucas Martin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="nav-name">Lucas Martin</a>
+        <div class="nav-links">
+            <a href="index.html">← Retour</a>
+        </div>
+    </nav>
+</header>
+
+<div class="page-banner">
+    <div class="page-banner-inner">
+        <span class="num">SAÉ 15 — Semestre 1</span>
+        <h1>Traiter des données</h1>
+        <p class="tagline">Script Python de supervision réseau : ping automatisé, export CSV et graphiques de disponibilité.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="detail-grid">
+
+        <div>
+            <div class="content-block">
+                <h2>Contexte et objectifs</h2>
+                <p>Cette SAÉ nous a initiés à la programmation Python dans un contexte réseau et télécoms. L'objectif : développer un outil permettant de surveiller la disponibilité d'un ensemble d'équipements réseau, de stocker les résultats et de les visualiser. Le projet était individuel, ce qui m'a demandé d'être autonome sur toutes les étapes, y compris la recherche de documentation.</p>
+                <p>La compétence visée était RT3 (Créer des outils et applications informatiques), niveau 1 : s'intégrer dans un service informatique.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Apprentissages Critiques mobilisés</h2>
+                <div class="ac-list">
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.01 — RT3</div>
+                        <div class="ac-label">Utiliser un système informatique et ses outils</div>
+                        <div class="ac-desc">Utilisation de VS Code, du terminal Python, de pip pour installer des bibliothèques (matplotlib, requests), et de l'environnement Linux pour exécuter les scripts.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.02 — RT3</div>
+                        <div class="ac-label">Lire, exécuter, corriger et modifier un programme</div>
+                        <div class="ac-desc">Lecture et compréhension de scripts Python fournis en exemple, identification des erreurs (IndexError, FileNotFoundError), correction et adaptation au cahier des charges de la SAÉ.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.03 — RT3</div>
+                        <div class="ac-label">Traduire un algorithme dans un langage donné</div>
+                        <div class="ac-desc">L'enseignant nous avait fourni des algorithmes en pseudocode. J'ai traduit en Python les fonctions de ping, d'écriture CSV et de génération du graphique matplotlib.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.05 — RT3</div>
+                        <div class="ac-label">Choisir les mécanismes de gestion de données adaptés</div>
+                        <div class="ac-desc">Choix du format CSV pour stocker les résultats (horodatage, IP, latence, statut). Justification : format léger, lisible par Excel, compatible avec matplotlib pour la visualisation.</div>
+                    </div>
+                    <div class="ac-item">
+                        <div class="ac-code">AC13.06 — RT3</div>
+                        <div class="ac-label">S'intégrer dans un environnement propice au développement collaboratif</div>
+                        <div class="ac-desc">Versionnement du code sur un dépôt Git personnel, avec commits réguliers et messages descriptifs. Utilisation de branches pour tester des fonctionnalités sans casser le code principal.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Tâches réalisées</h2>
+                <ul>
+                    <li>Écriture d'une fonction <code>ping_host(ip)</code> utilisant le module <code>subprocess</code> pour envoyer un ping et récupérer la latence</li>
+                    <li>Boucle principale : parcours d'une liste d'IPs toutes les 60 secondes, écriture des résultats dans un fichier CSV</li>
+                    <li>Génération d'un graphique de disponibilité par machine (axe du temps, couleur verte/rouge selon le statut) avec matplotlib</li>
+                    <li>Gestion des erreurs : machine injoignable, fichier CSV absent, timeout de ping</li>
+                    <li>Versionnement sur GitHub (dépôt public disponible dans la sidebar)</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2>Traces et preuves</h2>
+                <div class="trace-block">
+                    <div class="trace-label">Trace 1 — Extrait du script Python (fonction ping)</div>
+                    <p>La fonction <code>ping_host(ip, timeout=1)</code> utilise <code>subprocess.run</code> pour appeler ping, parse la sortie pour extraire la latence en ms, et retourne un dictionnaire contenant l'IP, le statut (up/down), la latence et l'horodatage. C'est le cœur de l'outil — illustre AC13.02 et AC13.03. Code source complet sur GitHub.</p>
+                </div>
+                <div class="trace-block">
+                    <div class="trace-label">Trace 2 — Graphique de disponibilité généré</div>
+                    <p>Graphique matplotlib généré après 30 minutes de supervision sur 5 équipements fictifs : axe X = temps, axe Y = latence en ms, points colorés (vert = disponible, rouge = injoignable). Montre concrètement AC13.05 : le choix du CSV comme format de stockage intermédiaire permet de régénérer ce graphique à tout moment.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Autoévaluation</h2>
+                <div class="autoeval-grid">
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Ce que j'ai réussi</div>
+                        <p>Le script fonctionne et produit un graphique lisible. La gestion des erreurs est propre — le script ne plante pas si une machine ne répond pas.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Difficultés rencontrées</div>
+                        <p>La gestion des exceptions Python m'a bloqué longtemps. Je ne comprenais pas pourquoi mon script plantait sur une machine injoignable. Il a fallu comprendre les types d'exceptions de subprocess.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Ce que j'aurais fait autrement</div>
+                        <p>J'aurais rendu le script configurable via un fichier externe (liste d'IPs, intervalle de mesure) plutôt que de tout mettre "en dur" dans le code.</p>
+                    </div>
+                    <div class="autoeval-item">
+                        <div class="autoeval-title">Adaptation possible</div>
+                        <p>Ce type d'outil de supervision minimaliste est utilisé dans tous les services IT. En l'enrichissant (alertes mail, SNMP), il deviendrait un vrai outil de monitoring utilisable en entreprise.</p>
+                    </div>
+                </div>
+                <div class="note-perso">
+                    ✏️ Cette SAÉ m'a montré que programmer, c'est 20% d'écriture et 80% de débogage. Ce n'est pas décourageant — c'est exactement ça qui rend le moment où ça fonctionne satisfaisant. J'ai aussi compris que la documentation officielle (docs.python.org) est souvent plus utile que les forums, même si elle est moins accessible au début.
+                </div>
+                <div class="niveau-bar">
+                    <div class="niveau-label">Niveau de maîtrise estimé — AC visés de la SAÉ 15</div>
+                    <div class="niveau-track"><div class="niveau-fill" style="width:50%"></div></div>
+                    <div class="niveau-ticks"><span>Débutant</span><span>En cours d'acquisition</span><span>Maîtrisé</span></div>
+                </div>
+                <a href="index.html" class="back">← Retour aux projets</a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h3>Infos projet</h3>
+                <div class="info-row"><span>Durée</span><span>5 semaines</span></div>
+                <div class="info-row"><span>Format</span><span>Individuel</span></div>
+                <div class="info-row"><span>Rendu</span><span>Script + rapport</span></div>
+                <div class="info-row"><span>Statut</span><span><span class="badge-ok">Terminé</span></span></div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Compétences visées</h3>
+                <div class="info-row"><span>RT3 Niveau 1</span><span>✓</span></div>
+            </div>
+            <div class="sidebar-card">
+                <h3>AC mobilisés</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">AC13.01</span>
+                    <span class="tech-tag">AC13.02</span>
+                    <span class="tech-tag">AC13.03</span>
+                    <span class="tech-tag">AC13.05</span>
+                    <span class="tech-tag">AC13.06</span>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Outils utilisés</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python 3</span>
+                    <span class="tech-tag">matplotlib</span>
+                    <span class="tech-tag">subprocess</span>
+                    <span class="tech-tag">CSV</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">VS Code</span>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h3>Code source</h3>
+                <div class="info-row"><span>GitHub</span><span><a href="https://github.com/lucasmrn/sae15" target="_blank" style="color:var(--blue-mid);">Voir le dépôt →</a></span></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Lucas Martin — BUT R&T, IUT de [Ville]</p>
+</footer>
+</body>
+</html>
